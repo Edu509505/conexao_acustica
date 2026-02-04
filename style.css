@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: rgb(12, 12, 12);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menuInicial {
+  background-color: black;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#logoNav {
+  width: 100px;
+  height: 40;
+  filter: invert();
+}
+
+.apresentacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 700px;
+  width: 100%;
+}
+#myVideo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 780px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.efeito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Vinheta em cima e embaixo */
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    /* topo mais escuro */ rgba(0, 0, 0, 0) 20%,
+    /* suaviza no meio */ rgba(0, 0, 0, 0) 80%,
+    /* mantém transparente no centro */ rgb(61, 61, 61) 100%
+      /* base mais escura */
+  );
+  background-blend-mode: multiply; /* mistura com o background-color */
+}
+
+.efeito > img {
+  width: 635px;
+  filter: invert(100%) drop-shadow(1px 1px 5px rgb(255, 255, 255));
+}
+@media only screen and (max-width: 651px) {
+  .efeito > img {
+    width: 380px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .efeito > img {
+    width: 335px;
+  }
+}
+.container {
+  width: 80;
+  height: 800px;
+}
