@@ -37,6 +37,7 @@ body {
   height: 700px;
   width: 100%;
 }
+
 #myVideo {
   position: absolute;
   top: 0;
@@ -55,32 +56,37 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   /* Vinheta em cima e embaixo */
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    /* topo mais escuro */ rgba(0, 0, 0, 0) 20%,
-    /* suaviza no meio */ rgba(0, 0, 0, 0) 80%,
-    /* mantém transparente no centro */ rgb(61, 61, 61) 100%
+  background-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      /* topo mais escuro */
+      rgba(0, 0, 0, 0) 20%,
+      /* suaviza no meio */
+      rgba(0, 0, 0, 0) 80%,
+      /* mantém transparente no centro */
+      rgb(61, 61, 61) 100%
       /* base mais escura */
-  );
-  background-blend-mode: multiply; /* mistura com o background-color */
+    );
+  background-blend-mode: multiply;
+  /* mistura com o background-color */
 }
 
-.efeito > img {
+.efeito>img {
   width: 635px;
   filter: invert(100%) drop-shadow(1px 1px 5px rgb(255, 255, 255));
 }
+
 @media only screen and (max-width: 651px) {
-  .efeito > img {
+  .efeito>img {
     width: 380px;
   }
 }
 
 @media only screen and (max-width: 400px) {
-  .efeito > img {
+  .efeito>img {
     width: 335px;
   }
 }
+
 .container {
   width: 80%;
   height: 600px;
@@ -91,7 +97,7 @@ body {
   opacity: 0;
 }
 
-.container > h1 {
+.container>h1 {
   font-size: 100px;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -285,7 +291,7 @@ body {
   padding-top: 30px;
 }
 
-.midias > div {
+.midias>div {
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -295,15 +301,15 @@ body {
   flex-wrap: wrap;
 }
 
-.midias > h1 {
+.midias>h1 {
   font-size: 4rem;
 }
 
-.cardMidia1 > img,
-.cardMidia2 > img,
-.cardMidia3 > img,
-.cardMidia4 > img,
-.cardMidia5 > img {
+.cardMidia1>img,
+.cardMidia2>img,
+.cardMidia3>img,
+.cardMidia4>img,
+.cardMidia5>img {
   width: 400px;
   height: 400px;
 }
@@ -327,15 +333,19 @@ body {
 .cardMidia1.play {
   animation: cardMidiaAnimation1 500ms;
 }
+
 .cardMidia2.play {
   animation: cardMidiaAnimation2 500ms;
 }
+
 .cardMidia3.play {
   animation: cardMidiaAnimation3 500ms;
 }
+
 .cardMidia4.play {
   animation: cardMidiaAnimation4 500ms;
 }
+
 .cardMidia5.play {
   animation: cardMidiaAnimation5 500ms;
 }
@@ -420,6 +430,47 @@ body {
   }
 }
 
+.shows {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* background-color: aqua; */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  z-index: 1;
+}
+
+.show::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+
+}
+
+.videoShows {
+  width: 300px;
+  height: 200px;
+  background-color: antiquewhite;
+}
+
 footer {
   width: 100%;
   display: flex;
@@ -462,7 +513,7 @@ footer {
   text-decoration: none;
 }
 
-.cardinvisivel > div {
+.cardinvisivel>div {
   display: flex;
   gap: 1rem;
 }
@@ -486,7 +537,7 @@ footer {
   width: 280px;
 }
 
-.finalfooter > h3 {
+.finalfooter>h3 {
   margin: 1rem 0;
   font-size: 1rem;
   font-weight: 100;
@@ -495,26 +546,29 @@ footer {
 @media only screen and (max-width: 624px) {
   .imageStatic2Efeito {
     font-size: 0.8rem;
+    width: 90%;
+    height: 600px;
   }
-  .container > h1 {
+
+  .container>h1 {
     font-size: 70px;
   }
-  .imageStatic2 > div {
-    width: 80%;
-  }
-  .midias > div > img {
+
+  .midias>div>img {
     width: 300px;
     height: 300px;
   }
-  .midias > h1 {
+
+  .midias>h1 {
     font-size: 3rem;
   }
+
   .conteudofooterpai {
     width: 90%;
     flex-direction: column;
   }
 
-  .conteudo > h1 {
+  .conteudo>h1 {
     margin: 2rem 0 0 0;
   }
 
@@ -522,25 +576,27 @@ footer {
     width: 150px;
     height: 150px;
   }
+
   .divisoriafooter {
     width: unset;
     height: unset;
     background-color: unset;
   }
-  .cardMidia1 > img,
-  .cardMidia2 > img,
-  .cardMidia3 > img,
-  .cardMidia4 > img,
-  .cardMidia5 > img {
+
+  .cardMidia1>img,
+  .cardMidia2>img,
+  .cardMidia3>img,
+  .cardMidia4>img,
+  .cardMidia5>img {
     width: 150px;
     height: 150px;
   }
 
-  .cardMidia1 > h1,
-  .cardMidia2 > h1,
-  .cardMidia3 > h1,
-  .cardMidia4 > h1,
-  .cardMidia5 > h1 {
+  .cardMidia1>h1,
+  .cardMidia2>h1,
+  .cardMidia3>h1,
+  .cardMidia4>h1,
+  .cardMidia5>h1 {
     font-size: 0.9rem;
   }
 }
