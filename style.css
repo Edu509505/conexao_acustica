@@ -166,6 +166,7 @@ body {
   opacity: 0;
 }
 
+
 .imageStaticEfeito2 {
   color: white;
   font-size: 1rem;
@@ -174,6 +175,29 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   opacity: 0;
+}
+
+.imageStaticEfeito2 > h2 > a {
+  font-style: italic;
+  animation: trocarFonte infinite linear 1000ms
+}
+
+@keyframes trocarFonte {
+    0%{
+      font-family: 'Courier New', Courier, monospace;
+    }
+    25%{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+    50%{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+    75%{
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    100%{
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
 }
 
 .imageStaticEfeito1.play {
