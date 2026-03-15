@@ -212,3 +212,19 @@ body {
   width: 500px;
   height: 500px;
 }
+
+@media only screen and (max-width: 624px) {
+  .container > h1 {
+    font-size: 70px;
+  }
+  .imageStatic2 > div {
+    width: 80%;
+  }
+  .midias > div > img {
+    width: 300px;
+    height: 300px;
+  }
+  .midias > h1 {
+    font-size: 3rem;
+  }
+}
