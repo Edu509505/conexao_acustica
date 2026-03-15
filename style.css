@@ -88,6 +88,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  opacity: 0;
 }
 
 .container > h1 {
@@ -95,6 +96,23 @@ body {
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 900;
+}
+
+.container.play {
+  opacity: 1;
+  animation: cardsAnimation 500ms;
+}
+
+@keyframes cardsAnimation {
+  0% {
+    opacity: 0;
+    margin-top: 200px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 50px;
+  }
 }
 
 .imageStatic {
@@ -132,13 +150,63 @@ body {
   pointer-events: none;
 }
 
-.imageStatic > h1 {
+.imageStaticEfeito1 {
   color: white;
-  font-size: 4rem;
+  font-size: 2rem;
   margin: 0;
   font-family: sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
+  opacity: 0;
+}
+
+.imageStaticEfeito2 {
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0;
+}
+
+.imageStaticEfeito1.play {
+  opacity: 1;
+  animation: imageStaticAnimation1 500ms;
+}
+
+.imageStaticEfeito2.play {
+  opacity: 1;
+  animation: imageStaticAnimation2 500ms;
+}
+
+@keyframes imageStaticAnimation1 {
+  0% {
+    opacity: 0;
+    margin-left: 200px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+@keyframes imageStaticAnimation2 {
+  0% {
+    opacity: 0;
+    margin-left: 200px;
+  }
+
+  20% {
+    opacity: 0;
+    margin-left: 200px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
 }
 
 .imageStatic2 {
@@ -174,7 +242,7 @@ body {
   pointer-events: none;
 }
 
-.imageStatic2 > div {
+.imageStatic2Efeito {
   width: 50%;
   height: 500px;
   padding: 20px;
@@ -184,6 +252,24 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+}
+
+.imageStatic2Efeito.play {
+  opacity: 1;
+  animation: imageStatic2Animation1 500ms;
+}
+
+@keyframes imageStatic2Animation1 {
+  0% {
+    opacity: 0;
+    margin-top: 200px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
 }
 
 .midias {
@@ -209,9 +295,125 @@ body {
   font-size: 4rem;
 }
 
-.cardMidia > img {
+.cardMidia1 > img,
+.cardMidia2 > img,
+.cardMidia3 > img,
+.cardMidia4 > img,
+.cardMidia5 > img {
   width: 400px;
   height: 400px;
+}
+
+.cardMidia1,
+.cardMidia2,
+.cardMidia3,
+.cardMidia4,
+.cardMidia5 {
+  opacity: 0;
+}
+
+.cardMidia1.play,
+.cardMidia2.play,
+.cardMidia3.play,
+.cardMidia4.play,
+.cardMidia5.play {
+  opacity: 1;
+}
+
+.cardMidia1.play {
+  animation: cardMidiaAnimation1 500ms;
+}
+.cardMidia2.play {
+  animation: cardMidiaAnimation2 500ms;
+}
+.cardMidia3.play {
+  animation: cardMidiaAnimation3 500ms;
+}
+.cardMidia4.play {
+  animation: cardMidiaAnimation4 500ms;
+}
+.cardMidia5.play {
+  animation: cardMidiaAnimation5 500ms;
+}
+
+@keyframes cardMidiaAnimation1 {
+  0% {
+    opacity: 0;
+    margin-top: 100px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+@keyframes cardMidiaAnimation2 {
+  0% {
+    opacity: 0;
+    margin-top: 100px;
+  }
+
+  20% {
+    opacity: 0;
+    margin-top: 100px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+@keyframes cardMidiaAnimation3 {
+  0% {
+    opacity: 0;
+    margin-top: 100px;
+  }
+
+  25% {
+    opacity: 0;
+    margin-top: 100px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+@keyframes cardMidiaAnimation4 {
+  0% {
+    opacity: 0;
+    margin-top: 100px;
+  }
+
+  30% {
+    opacity: 0;
+    margin-top: 100px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+@keyframes cardMidiaAnimation5 {
+  0% {
+    opacity: 0;
+    margin-top: 100px;
+  }
+
+  35% {
+    opacity: 0;
+    margin-top: 100px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
 }
 
 footer {
@@ -317,5 +519,24 @@ footer {
     width: unset;
     height: unset;
     background-color: unset;
+  }
+}
+
+@media only screen and (max-width: 624px) {
+  .cardMidia1 > img,
+  .cardMidia2 > img,
+  .cardMidia3 > img,
+  .cardMidia4 > img,
+  .cardMidia5 > img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cardMidia1 > h1,
+  .cardMidia2 > h1,
+  .cardMidia3 > h1,
+  .cardMidia4 > h1,
+  .cardMidia5 > h1 {
+    font-size: 0.9rem;
   }
 }
