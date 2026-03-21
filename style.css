@@ -56,33 +56,31 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   /* Vinheta em cima e embaixo */
-  background-image: linear-gradient(to bottom,
-      rgba(0, 0, 0, 1) 0%,
-      /* topo mais escuro */
-      rgba(0, 0, 0, 0) 20%,
-      /* suaviza no meio */
-      rgba(0, 0, 0, 0) 80%,
-      /* mantém transparente no centro */
-      rgb(61, 61, 61) 100%
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    /* topo mais escuro */ rgba(0, 0, 0, 0) 20%,
+    /* suaviza no meio */ rgba(0, 0, 0, 0) 80%,
+    /* mantém transparente no centro */ rgb(61, 61, 61) 100%
       /* base mais escura */
-    );
+  );
   background-blend-mode: multiply;
   /* mistura com o background-color */
 }
 
-.efeito>img {
+.efeito > img {
   width: 635px;
   filter: invert(100%) drop-shadow(1px 1px 5px rgb(255, 255, 255));
 }
 
 @media only screen and (max-width: 651px) {
-  .efeito>img {
+  .efeito > img {
     width: 380px;
   }
 }
 
 @media only screen and (max-width: 400px) {
-  .efeito>img {
+  .efeito > img {
     width: 335px;
   }
 }
@@ -97,7 +95,7 @@ body {
   opacity: 0;
 }
 
-.container>h1 {
+.container > h1 {
   font-size: 100px;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -125,7 +123,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 700px;
-  background-image: url("./assets/img/JPG/IMG_9304.JPG.jpeg");
+  background-image: url("./assets/img/JPG/IMG_9304.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -166,7 +164,6 @@ body {
   opacity: 0;
 }
 
-
 .imageStaticEfeito2 {
   color: white;
   font-size: 1rem;
@@ -187,42 +184,47 @@ body {
 }
 
 @keyframes trocarFonte {
-    0%{
-      font-family: 'Courier New', Courier, monospace;
-      /* color: blue; */
-    }
-    24.9%{
-      font-family: 'Courier New', Courier, monospace;
-      /* color: blue; */
-    }
-    25%{
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      /* color: chartreuse; */
-    }
-    49.9%{
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      /* color: chartreuse; */
-    }
-    50%{
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      /* color:crimson; */
-    }
-     74.9%{
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      /* color:crimson; */
-    }
-    75%{
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      /* color:gold; */
-    }
-    99.9%{
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      /* color:gold; */
-    }
-    100%{
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-      /* color: white; */
-    }
+  0% {
+    font-family: "Courier New", Courier, monospace;
+    /* color: blue; */
+  }
+  24.9% {
+    font-family: "Courier New", Courier, monospace;
+    /* color: blue; */
+  }
+  25% {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    /* color: chartreuse; */
+  }
+  49.9% {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    /* color: chartreuse; */
+  }
+  50% {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    /* color:crimson; */
+  }
+  74.9% {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    /* color:crimson; */
+  }
+  75% {
+    font-family:
+      "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    /* color:gold; */
+  }
+  99.9% {
+    font-family:
+      "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    /* color:gold; */
+  }
+  100% {
+    font-family:
+      "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    /* color: white; */
+  }
 }
 
 .imageStaticEfeito1.play {
@@ -340,7 +342,7 @@ body {
   padding-top: 30px;
 }
 
-.midias>div {
+.midias > div {
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -350,15 +352,15 @@ body {
   flex-wrap: wrap;
 }
 
-.midias>h1 {
+.midias > h1 {
   font-size: 4rem;
 }
 
-.cardMidia1>img,
-.cardMidia2>img,
-.cardMidia3>img,
-.cardMidia4>img,
-.cardMidia5>img {
+.cardMidia1 > img,
+.cardMidia2 > img,
+.cardMidia3 > img,
+.cardMidia4 > img,
+.cardMidia5 > img {
   width: 400px;
   height: 400px;
 }
@@ -479,7 +481,7 @@ body {
   }
 }
 
-.banner{
+.banner {
   position: relative;
   width: 100%;
   min-height: 400px;
@@ -502,7 +504,7 @@ body {
   z-index: 1;
 }
 
-.efeitoBanner{
+.efeitoBanner {
   width: 100%;
   height: 400px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -520,27 +522,26 @@ body {
 .shows {
   position: relative;
   width: 100%;
-  min-height: 500px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  /* background-color: aqua; */
 
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 5%;
   box-sizing: border-box;
   gap: 2rem;
   flex-wrap: wrap;
 
   z-index: 1;
+
+  transition: 300ms;
 }
 
-.show::before {
+.shows::before {
   content: "";
   position: absolute;
   top: 0;
@@ -549,13 +550,35 @@ body {
   height: 100%;
   z-index: -1;
   pointer-events: none;
-
 }
 
 .videoShows {
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
   background-color: antiquewhite;
+}
+
+.trigger {
+  width: 400px;
+  height: 300px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+}
+
+.backgroundVideoClass {
+  position: absolute;
+  top: 5;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.backgroundVideoClass.play {
+  opacity: 1;
 }
 
 footer {
@@ -600,7 +623,7 @@ footer {
   text-decoration: none;
 }
 
-.cardinvisivel>div {
+.cardinvisivel > div {
   display: flex;
   gap: 1rem;
 }
@@ -624,7 +647,7 @@ footer {
   width: 280px;
 }
 
-.finalfooter>h3 {
+.finalfooter > h3 {
   margin: 1rem 0;
   font-size: 1rem;
   font-weight: 100;
@@ -637,16 +660,16 @@ footer {
     height: 600px;
   }
 
-  .container>h1 {
+  .container > h1 {
     font-size: 70px;
   }
 
-  .midias>div>img {
+  .midias > div > img {
     width: 300px;
     height: 300px;
   }
 
-  .midias>h1 {
+  .midias > h1 {
     font-size: 3rem;
   }
 
@@ -655,7 +678,7 @@ footer {
     flex-direction: column;
   }
 
-  .conteudo>h1 {
+  .conteudo > h1 {
     margin: 2rem 0 0 0;
   }
 
@@ -670,20 +693,20 @@ footer {
     background-color: unset;
   }
 
-  .cardMidia1>img,
-  .cardMidia2>img,
-  .cardMidia3>img,
-  .cardMidia4>img,
-  .cardMidia5>img {
+  .cardMidia1 > img,
+  .cardMidia2 > img,
+  .cardMidia3 > img,
+  .cardMidia4 > img,
+  .cardMidia5 > img {
     width: 150px;
     height: 150px;
   }
 
-  .cardMidia1>h1,
-  .cardMidia2>h1,
-  .cardMidia3>h1,
-  .cardMidia4>h1,
-  .cardMidia5>h1 {
+  .cardMidia1 > h1,
+  .cardMidia2 > h1,
+  .cardMidia3 > h1,
+  .cardMidia4 > h1,
+  .cardMidia5 > h1 {
     font-size: 0.9rem;
   }
 }
