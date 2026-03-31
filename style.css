@@ -560,8 +560,7 @@ body {
 
 .trigger {
   width: 400px;
-  height: 300px;
-  background-color: antiquewhite;
+  height: 225px;
   border-radius: 10px;
 }
 
@@ -581,6 +580,42 @@ body {
   opacity: 1;
 }
 
+.video-card {
+  position: relative; /* Isso permite que o botão 'flutue' sobre a imagem */
+  display: block;
+  width: 100%;
+  max-width: 600px; /* Ou o tamanho que você quiser */
+  border-radius: 10px;
+}
+
+/* O Botão de Play Vermelho */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0.9);
+  border-radius: 15px;
+}
+
+/* O triângulo branco dentro do play */
+.play-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent white;
+}
+.video-card img {
+  width: 100%;
+  height: 200px; /* Ou a altura que você preferir */
+  object-fit: cover; /* Isso corta as bordas pretas e preenche o espaço */
+}
 footer {
   width: 100%;
   display: flex;
